@@ -752,7 +752,7 @@ snaptr('track', 'PAGE_VIEW');
 
             <div class="payment-option-box" onclick="selectPaymentOption('partial')">
                 <div class="option-text">
-                    <h4>دفع مبلغ (1 ريال) لتأكيد الطلب</h4>
+                    <h4>دفع مبلغ (25 ريال) لتأكيد الطلب</h4>
                     <p>يتم خصمه من الإجمالي، ودفع المتبقي + (1 ر.س توصيل) عند الاستلام</p>
                 </div>
                 <input type="radio" id="radio-partial" name="pay_type" style="width: 18px; height: 18px; accent-color: #2d6a4f;">
@@ -923,7 +923,7 @@ snaptr('track', 'PAGE_VIEW');
             
             let payableAmountStr = subtotalStr;
             if (selectedPaymentType === 'partial' && cartCount > 0) {
-                payableAmountStr = '1.000 ر.س';
+                payableAmountStr = '25.000 ر.س';
             } else if (cartCount === 0) {
                 payableAmountStr = '0.000 ر.س';
             }
@@ -1019,7 +1019,7 @@ snaptr('track', 'PAGE_VIEW');
                 }
 
 
-                const amountToPay = selectedPaymentType === 'full' ? subtotal.toFixed(3) + ' ر.س' : '1.000 ر.س';
+                const amountToPay = selectedPaymentType === 'full' ? subtotal.toFixed(3) + ' ر.س' : '25.000 ر.س';
                 localStorage.setItem('finalAmount', amountToPay);
 
 
